@@ -9,11 +9,6 @@ For a working example that uses this library, see [toznyauth-pam][].
 [tozny]: http://tozny.com/
 [toznyauth-pam]: https://github.com/tozny/toznyauth-pam
 
-For more information, see the package documentation.  To build the
-documentation:
+For more information, see the [package documentation][doc].
 
-    $ cargo doc
-
-Then open
-
-    target/doc/tozny_auth/index.html
+[doc]: https://tozny.github.io/sdk-rust/tozny_auth/

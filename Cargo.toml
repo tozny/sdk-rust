@@ -1,7 +1,14 @@
 [package]
 name = "tozny_auth"
+description = "Rust interface to the Tozny authentication service"
 version = "1.0.0"
 authors = [ "Jesse Hallett <jesse@galois.com>" ]
+documentation = "https://tozny.github.io/sdk-rust/tozny_auth/"
+homepage = "https://github.com/tozny/sdk-rust"
+repository = "https://github.com/tozny/sdk-rust.git"
+readme = "README.md"
+keywords = ["tozny", "authentication", "2FA"]
+license = "MIT"
 
 [lib]
 name = "tozny_auth"
