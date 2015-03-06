@@ -1,0 +1,15 @@
+[package]
+name = "tozny_auth"
+version = "1.0.0"
+authors = [ "Jesse Hallett <jesse@galois.com>" ]
+
+[lib]
+name = "tozny_auth"
+
+[dependencies]
+chrono          = "~0.2.1"
+hyper           = "~0.3.0"
+rand            = "~0.1.2"
+rust-crypto     = "~0.2.15"
+rustc-serialize = "~0.3.1"
+url             = "~0.2.18"
