@@ -7,7 +7,7 @@ this SDK is to make it easy to add Tozny support to Rust apps.
 For a working example that uses this library, see [toznyauth-pam][].
 
 [tozny]: http://tozny.com/
-[tozny-pam]: https://github.com/tozny/toznyauth-pam
+[toznyauth-pam]: https://github.com/tozny/toznyauth-pam
 
 For more information, see the package documentation.  To build the
 documentation:
