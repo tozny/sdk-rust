@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `UserApi` struct in crate `tozny_auth`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, UserApi">
+
+    <title>tozny_auth::user::UserApi - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>tozny_auth</a>::<wbr><a href='index.html'>user</a></p><script>window.sidebarCurrent = {name: 'UserApi', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>tozny_auth</a>::<wbr><a href='index.html'>user</a>::<wbr><a class='struct' href=''>UserApi</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]</a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-5389' href='../../src/tozny_auth/user.rs.html#49-52'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct UserApi {
+    // some fields omitted
+}</pre><div class='docblock'><p>Interface for sending user-level API calls to Tozny.</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><a class='stability Unmarked' title='No stability level'></a><code>impl <a class='struct' href='../../tozny_auth/user/struct.UserApi.html' title='tozny_auth::user::UserApi'>UserApi</a></code></h3><div class='impl-items'><h4 id='method.new' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.new' class='fnname'>new</a>(key_id: <a class='struct' href='../../tozny_auth/protocol/struct.KeyId.html' title='tozny_auth::protocol::KeyId'>KeyId</a>, url: Url) -&gt; <a class='struct' href='../../tozny_auth/user/struct.UserApi.html' title='tozny_auth::user::UserApi'>UserApi</a></code></h4>
+<div class='docblock'><p>It is necessary to provide a realm key id to identify a realm.  However
+the corresponding secret is not required.  So this method can be called
+in an untrusted environment.</p>
+
+<p>The URL&#39;s for the public Tozny API is: <a href="https://api.tozny.com">https://api.tozny.com</a></p>
+</div><h4 id='method.raw_call' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.raw_call' class='fnname'>raw_call</a>&lt;'a&gt;(&amp;self, params: <a class='struct' href='http://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(&amp;'a <a href='http://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>, &amp;'a <a href='http://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>)</a>&gt;) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='enum' href='http://doc.rust-lang.org/rustc-serialize/rustc-serialize/json/enum.Json.html' title='rustc-serialize::json::Json'>Json</a>, <a class='enum' href='../../tozny_auth/question/enum.QuestionError.html' title='tozny_auth::question::QuestionError'>QuestionError</a>&gt;</code></h4>
+<div class='docblock'><p>Low-level method for sending arbitrary user-level API calls.</p>
+</div><h4 id='method.login_challenge' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.login_challenge' class='fnname'>login_challenge</a>(&amp;self) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='struct' href='../../tozny_auth/user/struct.LoginChallenge.html' title='tozny_auth::user::LoginChallenge'>LoginChallenge</a>, <a class='enum' href='../../tozny_auth/question/enum.QuestionError.html' title='tozny_auth::question::QuestionError'>QuestionError</a>&gt;</code></h4>
+<div class='docblock'><p>Use this method to initiate a login.  See the documentation on
+<code>LoginChallenge</code> for some information on how to use the response.</p>
+</div><h4 id='method.push' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.push' class='fnname'>push</a>(&amp;self, session_id: &amp;<a class='struct' href='../../tozny_auth/protocol/struct.SessionId.html' title='tozny_auth::protocol::SessionId'>SessionId</a>, presence: &amp;<a class='struct' href='../../tozny_auth/protocol/struct.Presence.html' title='tozny_auth::protocol::Presence'>Presence</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, <a class='enum' href='../../tozny_auth/question/enum.QuestionError.html' title='tozny_auth::question::QuestionError'>QuestionError</a>&gt;</code></h4>
+<div class='docblock'><p>Sends a push notification to a user&#39;s mobile device asking the user to
+sign in to something.</p>
+</div><h4 id='method.check_session_status' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.check_session_status' class='fnname'>check_session_status</a>(&amp;self, session_id: &amp;<a class='struct' href='../../tozny_auth/protocol/struct.SessionId.html' title='tozny_auth::protocol::SessionId'>SessionId</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../tozny_auth/question/struct.Question.html' title='tozny_auth::question::Question'>Question</a>&gt;, <a class='enum' href='../../tozny_auth/question/enum.QuestionError.html' title='tozny_auth::question::QuestionError'>QuestionError</a>&gt;</code></h4>
+<div class='docblock'><p>Returns a signed question that may be checked via the <code>Realm</code>
+<code>verify_login</code> method to verify an authenticated session (if the result
+is <code>Ok(Some(question))</code>.  If the result is <code>Ok(None)</code> that indicates
+that the session is &quot;pending&quot; - the user has not yet confirmed the
+session via the Tozny app.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "tozny_auth";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

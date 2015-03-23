@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["LoginChallenge","Result of `login_challenge` call.  Contains a number of values that are necessary for an authentication flow.  A brief rundown:"],["User","Information associated with a Tozny user.  This struct should be expanded in the future."],["UserApi","Interface for sending user-level API calls to Tozny."]]});

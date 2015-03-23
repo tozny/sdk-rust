@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["Login","Upon success authentication, the `user.check_session_status` API call will return a `Login` value."]]});
